@@ -1,0 +1,23 @@
+{
+  "name": "bundle-service",
+  "version": "0.0.1",
+  "description": "Reference Tealeaf bundle service",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive -R spec test",
+    "watch": "node testWatcher.js"
+  },
+  "author": "Joe Wilm <joe@gameclosure.com>",
+  "license": "ISC",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "bluebird": "^2.9.24",
+    "express": "^4.12.3",
+    "glob": "^5.0.5",
+    "semver": "^4.3.3"
+  },
+  "devDependencies": {
+    "gaze": "^0.5.1",
+    "mocha": "^2.2.4"
+  }
+}
