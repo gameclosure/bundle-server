@@ -13,7 +13,8 @@ var archiveProvider = {
       ext: 'zip',
       path: path.join(__fixtures, 'archives')
     });
-  }
+  },
+  capabilities: ArchiveProvider.capabilities
 };
 
 providerTests.unitTests(archiveProvider);

@@ -1,1 +1,1 @@
-require('./bin/bundle-service');
+module.exports = require('./lib');
