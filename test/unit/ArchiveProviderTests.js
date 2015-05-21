@@ -1,7 +1,7 @@
-var ArchiveProvider = require(__lib + '/providers/ArchiveProvider');
+var ArchiveProvider = require(lib('providers/ArchiveProvider'));
 var path = require('path');
 
-var providerTests = require(test('ProviderTests'));
+var providerTests = require(test('unit/ProviderTests'));
 
 // TODO abstract provider tests from any concrete provider. This is achieveable
 // by specifying some setup/teardown functions for various test types.
