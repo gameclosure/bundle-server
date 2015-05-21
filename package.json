@@ -4,7 +4,7 @@
   "description": "Reference Tealeaf bundle service",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive -R spec test",
+    "test": "mocha --recursive -R nyan test",
     "watch": "node testWatcher.js",
     "make_docs": "jsdoc -c jsdoc.json -R README.md -d docs -r lib"
   },
