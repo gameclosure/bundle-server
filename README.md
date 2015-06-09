@@ -3,6 +3,10 @@ bundle-server
 
 A reference implementation of the bundle server API
 
+Support will be added to devkit in the future for loading applications from HTTP
+servers following this specification. The spec does not currently cover DLC
+which may be investigated later this year.
+
 [![Circle CI](https://circleci.com/gh/gameclosure/bundle-server/tree/master.svg?style=svg&circle-token=a07450db8207856d1b35a94ae027b6986cf7671f)](https://circleci.com/gh/gameclosure/bundle-server/tree/master)
 ## Synopsis
 
