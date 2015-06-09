@@ -9,7 +9,7 @@
     "make_docs": "jsdoc -c jsdoc.json -R README.md -d docs -r lib"
   },
   "bin": {
-    "bundle_service": "./bin/bundle_service.js"
+    "tl_app_server": "./bin/bundle_service.js"
   },
   "author": "Joe Wilm <joe@gameclosure.com>",
   "license": "ISC",
