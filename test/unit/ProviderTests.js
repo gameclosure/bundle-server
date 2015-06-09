@@ -131,17 +131,7 @@ function providerUnitTests(provider) {
     });
 
     if (provider.capabilities.getFile) {
-      describe('#getFile', function () {
-        before(function () {
-          this.getFile = function () {
-            return this.provider.getFile(appName, version , manifestFile);
-          };
-        });
-
-        after(function () {
-          this.getFile = void 0;
-        });
-
+      function createGetFileTests() {
         it('returns a promise', function () {
           assert(this.getFile() instanceof Promise);
         });
@@ -164,6 +154,34 @@ function providerUnitTests(provider) {
             assert(manifest.shortName);
           }).then(done, done);
         });
+      }
+
+      describe('#getFile', function () {
+        before(function () {
+          this.getFile = function () {
+            return this.provider.getFile(appName, version , manifestFile);
+          };
+        });
+
+        after(function () {
+          this.getFile = void 0;
+        });
+
+        createGetFileTests.call(this);
+      });
+
+      describe('#getLatestFile', function () {
+        before(function () {
+          this.getFile = function () {
+            return this.provider.getLatestFile(appName, manifestFile);
+          };
+        });
+
+        after(function () {
+          this.getFile = void 0;
+        });
+
+        createGetFileTests.call(this);
       });
     }
 
