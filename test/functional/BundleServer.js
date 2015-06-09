@@ -152,9 +152,9 @@ describe('BundleServer', function () {
   });
 
   describe('/:app_id/file/:version/:path', function () {
-    it('returns manifest when path is manifest.json', function (done) {
+    function requestManifest(version, done) {
       request
-      .get(location('/shooter/file/v2.0.0/manifest.json'))
+      .get(location('/shooter/file/' + version + '/manifest.json'))
       .end(function (err, res) {
         assert.equal(res.header['content-type'], 'application/json');
         var manifest = JSON.parse(res.text);
@@ -162,6 +162,13 @@ describe('BundleServer', function () {
         assert(manifest.shortName);
         done();
       });
+    }
+    it('returns manifest when path is manifest.json', function (done) {
+      requestManifest('v2.0.0', done);
+    });
+
+    it('handles the :version latest', function (done) {
+      requestManifest('latest', done);
     });
 
     it('sends a 404 when file is not found', function (done) {
