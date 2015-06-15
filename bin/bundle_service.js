@@ -46,7 +46,7 @@ function Run() {
       process.exit(1);
   }
 
-  var server = BundleServer.create({ provider: provider });
+  var server = BundleServer.create({ provider: provider, argv: argv});
   var port = argv.port || 3000;
   server.getExpressApp().listen(port, function () {
     console.log('listening on port', port);
